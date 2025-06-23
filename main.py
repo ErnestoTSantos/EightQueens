@@ -29,20 +29,8 @@ def hill_climbing_queen():
 
 
 def simulated_annealing_queen():
-    print("Rodando o algoritmo de recozimento simulado (com paciência)...")
     solver = AnnealingSolver(n=8)
-    start = time.time()
-    solver.solve()
-    end = time.time()
-
-    if solver.solution:
-        print("Solução encontrada!")
-        print(f"Tabuleiro: {solver.solution.queens}")
-        print(f"Ataques restantes: {solver.solution.calculate_attacks()}")
-    else:
-        print("Não foi dessa vez. Tente rodar de novo, talvez com mais sorte.")
-
-    print(f"Tempo gasto: {end - start:.2f} segundos")
+    solver.run_with_timer()
 
 
 def backtracking():

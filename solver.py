@@ -22,6 +22,6 @@ class QueenSolverBase:
             print(f"Solução encontrada: {self.solution.queens}")
             print(f"Tempo de execução: {self.execution_time:.4f} segundos")
             if hasattr(self.solution, "plot"):
-                self.solution.draw_board()
+                self.solution.plot()
         else:
             print("Nenhuma solução foi encontrada.")
